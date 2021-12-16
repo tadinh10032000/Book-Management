@@ -1,0 +1,21 @@
+.bookcase{
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.padding{
+    padding: 30px 20px 10px 20px;
+}
+.title{
+    font-weight: bold;
+    font-size: 20px;
+    color: black
+}
+.brief{
+    color: darkslategrey;
+}
+.author{
+    text-align: right;
+    color: purple;
+    font-weight: bold;
+}
