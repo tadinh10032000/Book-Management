@@ -10,6 +10,7 @@ package entity;
  * @author win
  */
 public class User {
+    private int id;
     private String username;
     private String password;
     private String role_id;
@@ -17,11 +18,21 @@ public class User {
     public User() {
     }
 
-    public User(String username, String password, String role_id) {
+    public User(int id, String username, String password, String role_id) {
+        this.id = id;
         this.username = username;
         this.password = password;
         this.role_id = role_id;
     }
+
+    public String getRole_id() {
+        return role_id;
+    }
+
+    public void setRole_id(String role_id) {
+        this.role_id = role_id;
+    }
+    
 
     public String getUsername() {
         return username;
@@ -39,12 +50,14 @@ public class User {
         this.password = password;
     }
 
-    public String getRole_id() {
-        return role_id;
+   
+
+    public int getId() {
+        return id;
     }
 
-    public void setRole_id(String role_id) {
-        this.role_id = role_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
 }

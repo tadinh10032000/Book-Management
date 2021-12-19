@@ -30,7 +30,7 @@ public class LoginDAO {
             ps.setString(2, pass);
             rs = ps.executeQuery();
             while (rs.next()) {
-                User a = new User(rs.getString("user_name"), rs.getString("password"), rs.getString("role_id"));
+                User a = new User(rs.getInt("id"),rs.getString("user_name"), rs.getString("password"), rs.getString("role_id"));
                 return a;
             }
         } catch (Exception e) {
@@ -38,9 +38,9 @@ public class LoginDAO {
         return null;
         
     }
-    public static void main(String[] args) {
-        LoginDAO login = new LoginDAO();
-        User user = login.checkLogin("NGOCDK1", "123");
-        System.out.println(user.getRole_id());
-    }
+//    public static void main(String[] args) {
+//        LoginDAO login = new LoginDAO();
+//        User user = login.checkLogin("NGOCDK1", "123");
+//        System.out.println(user.getId());
+//    }
 }

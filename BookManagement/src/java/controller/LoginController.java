@@ -8,12 +8,12 @@ package controller;
 import dao.LoginDAO;
 import entity.User;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -39,12 +39,17 @@ public class LoginController extends HttpServlet {
             String password = request.getParameter("password");
             LoginDAO loginDAO = new LoginDAO();
             User a = loginDAO.checkLogin(user, password);
-            
+            HttpSession session = request.getSession();
+            //session
             if (a == null) {
                 response.sendRedirect("Login.jsp");
-            } else if(a!=null && a.getRole_id().equals("1")) {
+            } else if (a != null && a.getRole_id().equals("1")) {
+                session.setAttribute("id", a.getId());
+                session.setAttribute("username", a.getUsername());                
                 response.sendRedirect("Admin.jsp");
-            }else{
+            } else {
+                session.setAttribute("id", a.getId());
+                session.setAttribute("username", a.getUsername());
                 response.sendRedirect("ViewBookController");
             }
         } catch (Exception e) {

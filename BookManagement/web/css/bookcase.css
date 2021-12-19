@@ -1,0 +1,65 @@
+/*phan css add them*/
+
+.content{
+    margin-left: 100px;
+
+}
+
+
+.btn_submit{
+    margin-top: 20px;
+    display: block;
+    border-radius: 10px;
+    height: 36px;
+    width: 100px;
+    margin-bottom: 50px;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+}
+.styled-table thead tr {
+    background-color: #9e9a9a;
+    color: black;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #ccc;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #ccc;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #ccc;
+}
+
+select, input[type=text]{
+    width:50%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+
+}
+
+input[type=text]:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+}
